@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sobre Nosotros</title>
+<link rel="icon" href="/images/logo_avenida-rivera.ico">
+
+<!-- bootstrap links -->
+<link
+	href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+	rel="stylesheet">
+<script
+	src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<link rel="stylesheet"
+	href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+<!-- mis ccs -->
+<link rel="stylesheet" href="/css/sobreNosotros.css">
+</head>
+<body>
+
+	<header
+		class="bg-teal d-flex justify-content-between align-items-center px-4 py-2">
+		<div class="d-flex align-items-center">
+			<img src="/images/logo_avenida-rivera.ico"
+				alt="Logo del Restaurante Avenida Rivera" width="50" height="50"
+				class="me-3">
+			<h1 class="text-white fs-4">Restaurante Avenida Rivera</h1>
+		</div>
+
+		<div class="d-flex align-items-center">
+			<div th:if="${#authentication.principal != 'anonymousUser'}"
+				class="me-3">
+				<div class="dropdown">
+					<button class="btn btn-success dropdown-toggle" type="button"
+						id="userDropdown" data-bs-toggle="dropdown">
+						<span th:text="${#authentication.principal.fullname}"></span>
+					</button>
+					<ul class="dropdown-menu dropdown-menu-end">
+						<li
+							th:if="${#authorization.expression('hasAuthority(''ADMIN'')')}">
+							<a class="dropdown-item" th:href="@{/admin}">Panel Admin</a>
+						</li>
+						<li th:if="${#authorization.expression('hasAuthority(''USER'')')}">
+							<a class="dropdown-item" th:href="@{/user}">Mi Cuenta</a>
+						</li>
+						<li><hr class="dropdown-divider"></li>
+						<li>
+							<form th:action="@{/logout}" method="post">
+								<button class="dropdown-item" type="submit">Cerrar
+									sesión</button>
+							</form>
+						</li>
+					</ul>
+				</div>
+			</div>
+
+			<div th:unless="${#authentication.principal != 'anonymousUser'}"
+				class="ms-2">
+				<a href="/registration" class="btn btn-info me-2">Crear Cuenta</a> <a
+					href="/login" class="btn btn-light">Inicio de sesión</a>
+			</div>
+		</div>
+	</header>
+
+	<nav class="navbar navbar-expand-lg navbar-light bg-light">
+		<div class="container-fluid justify-content-center">
+			<ul class="navbar-nav">
+				<li class="nav-item"><a class="nav-link text-black" href="/">Inicio</a></li>
+				<li class="nav-item"><a class="nav-link text-black"
+					href="/producto">Productos</a></li>
+				<li class="nav-item"><a class="nav-link text-black"
+					href="/sobreNosotros">Sobre Nosotros</a></li>
+				<li class="nav-item"><a class="nav-link text-black"
+					href="/ubicacion">Ubicación</a></li>
+			</ul>
+		</div>
+	</nav>
+	<main class="container-fluid p-5">
+		<div class="row align-items-center mb-5">
+			<div class="col-md-6">
+				<h2 class="section-title">Nuestra Historia</h2>
+				<p>El Restaurante Avenida Rivera nació de la idea de crear un
+					espacio diferente, donde las personas pudieran disfrutar no solo de
+					una excelente comida, sino también de un ambiente natural,
+					tranquilo y familiar. Desde sus inicios en Rivera, Huila, el
+					restaurante fue pensado como un lugar al aire libre, cerca de la
+					naturaleza y los animales, para brindar a cada visitante una
+					experiencia única y memorable.</p>
+				<p>Con esfuerzo y dedicación, se ha convertido en un lugar ideal
+					para compartir en familia, relajarse y disfrutar de lo mejor de la
+					gastronomía regional, manteniendo siempre un trato cercano, amable
+					y un ambiente campestre que lo caracteriza.</p>
+			</div>
+			<div class="col-md-6 cuadroHistoria">
+				<img src="/images/nuestraHistoria.jpg"
+					class="img-fluid rounded shadow fotoHistoria" alt="Imagen Historia Restaurante Avenida Rivera">
+			</div>
+		</div>
+
+		<div class="row align-items-center mb-5">
+			<div class="col-md-6 order-md-2">
+				<h2 class="section-title">Nuestra Misión</h2>
+				<p>En el Restaurante Avenida Rivera, nuestra misión es ofrecer
+					una experiencia gastronómica de alta calidad, combinando sabores
+					auténticos, ingredientes frescos y un ambiente natural que permita
+					a nuestros clientes disfrutar momentos especiales en familia y con
+					amigos.</p>
+				<p>Buscamos brindar un servicio cálido, cercano y personalizado,
+					creando un espacio donde la naturaleza, la tranquilidad y la buena
+					comida se unan para ofrecer una experiencia diferente, agradable e
+					inolvidable.</p>
+			</div>
+			<div class="col-md-6 order-md-1 cuadroMision">
+				<img src="/images/nuestraMision.jpg"
+					class="img-fluid rounded shadow fotoMision" alt="Imagen Misión Restaurante Avenida Rivera">
+			</div>
+		</div>
+
+		<div class="row align-items-center mb-5">
+			<div class="col-md-6">
+				<h2 class="section-title">Nuestra Visión</h2>
+				<p>Ser reconocidos como uno de los restaurantes campestres más
+					destacados de Rivera, Huila, por ofrecer una experiencia integral
+					que combine excelente gastronomía, contacto con la naturaleza y un
+					ambiente familiar único.</p>
+				<p>Aspiramos a crecer de manera sostenible, fortaleciendo
+					nuestra calidad, servicio e innovación, para convertirnos en un
+					referente regional de turismo gastronómico y espacios de encuentro
+					para las familias.</p>
+			</div>
+			<div class="col-md-6 cuadroHistoria">
+				<img src="/images/nuestraVision.jpg"
+					class="img-fluid rounded shadow fotoVision" alt="Imagen Visión Restaurante Avenida Rivera">
+			</div>
+		</div>
+
+	</main>
+
+	<!-- footer -->
+	<footer class="bg-dark text-light pt-5">
+		<div class="container px-5">
+			<div class="row">
+				<div class="col-6 col-lg-6">
+					<h3 class="fw-bold">Restaurante Avenida Rivera</h3>
+					<p class="pt-2">KM 4 en Via Rivera Bajo Pedegral</p>
+				</div>
+				<div class="col-6 col-lg-3 text-lg-end">
+					<h4>Siguenos en Redes</h4>
+					<div class="social-media pt-2">
+						<a
+							href="https://www.facebook.com/share/17JyZfKmAQ/?mibextid=wwXIfr"
+							target="_blank" class="text-light fs-2 me-3"><i
+							class="bi bi-facebook"></i></a> <a
+							href="https://www.instagram.com/restauranteavenidarivera?igsh=OXE3eXB4OGd6Z21s"
+							target="_blank" class="text-light fs-2 me-3"><i
+							class="bi bi-instagram"></i></a> <a
+							href="https://www.tiktok.com/@gabriel.avenida8?_t=ZS-90O8O9TjMMU&_r=1"
+							target="_blank" class="text-light fs-2"><i
+							class="bi bi-tiktok"></i></a>
+					</div>
+				</div>
+			</div>
+			<hr>
+			<div class="d-sm-flex justify-content-between py-1">
+				<p>2025 © Restaurante Avenida Rivera.</p>
+			</div>
+		</div>
+	</footer>
+</body>
+</html>

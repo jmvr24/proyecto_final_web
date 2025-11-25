@@ -1,0 +1,22 @@
+/* Colores personalizados */
+.bg-teal {
+  background-color: rgb(0, 0, 0);
+}
+
+.bg-lightgreen {
+  background-color: #a8df65;
+}
+
+/* Input central del header */
+header input {
+  max-width: 400px;
+}
+
+
+/* Títulos con subrayado */
+main h6 {
+  border-bottom: 2px solid black;
+  display: inline-block;
+  padding-bottom: 5px;
+  margin-bottom: 10px;
+}

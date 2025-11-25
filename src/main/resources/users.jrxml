@@ -1,0 +1,104 @@
+<!-- Created with Jaspersoft Studio version 7.0.1.final using JasperReports Library version 7.0.1-573496633c2b4074e32f433154b543003f7d2498  -->
+<jasperReport name="users" language="java" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="e7eebaa4-068b-407f-bf7a-d4c2e72a1292">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="NacyReporte"/>
+	<style name="Title" fontName="Arial" fontSize="26.0" bold="true"/>
+	<style name="SubTitle" forecolor="#666666" fontName="Arial" fontSize="18.0"/>
+	<style name="Column header" forecolor="#666666" fontName="Arial" fontSize="12.0" bold="true"/>
+	<style name="Detail" fontName="Arial" fontSize="12.0"/>
+	<query language="SQL"><![CDATA[SELECT * FROM users]]></query>
+	<field name="id" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="id"/>
+		<property name="com.jaspersoft.studio.field.label" value="id"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="users"/>
+	</field>
+	<field name="email" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="email"/>
+		<property name="com.jaspersoft.studio.field.label" value="email"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="users"/>
+	</field>
+	<field name="fullname" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="fullname"/>
+		<property name="com.jaspersoft.studio.field.label" value="fullname"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="users"/>
+	</field>
+	<field name="role" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="role"/>
+		<property name="com.jaspersoft.studio.field.label" value="role"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="users"/>
+	</field>
+	<background splitType="Stretch"/>
+	<title height="70" splitType="Stretch">
+		<element kind="image" uuid="d7cb9de5-f1d6-4e9a-8441-72f5e2127742" x="275" y="0" width="300" height="64">
+			<expression><![CDATA["logo_avenidarivera.jpeg"]]></expression>
+		</element>
+		<element kind="staticText" uuid="3eb8e1ab-7e38-4368-89db-62b6501a8c67" x="0" y="13" width="263" height="33" fontSize="15.0" vTextAlign="Middle" style="Title">
+			<text><![CDATA[Restaurante Avenida Rivera Campestre]]></text>
+		</element>
+		<element kind="staticText" uuid="0b5308cc-82cf-49a0-8011-6f875d4c5e32" x="100" y="46" width="174" height="22" style="SubTitle">
+			<text><![CDATA[Usuarios registrados]]></text>
+		</element>
+	</title>
+	<pageHeader splitType="Stretch"/>
+	<columnHeader height="36" splitType="Stretch">
+		<element kind="line" uuid="d69c6691-e92e-45c5-bf2d-c1dc15dabb91" positionType="FixRelativeToBottom" x="0" y="35" width="555" height="1">
+			<pen lineWidth="0.5" lineColor="#999999"/>
+		</element>
+		<element kind="staticText" uuid="19f192a2-a270-485b-885f-4f836c251e3f" x="0" y="19" width="138" height="15" style="Column header">
+			<text><![CDATA[ID]]></text>
+			<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="617a8194-4927-4d8c-961b-a6279491c755"/>
+		</element>
+		<element kind="staticText" uuid="8b88cd00-0c87-472b-b7ed-9bbae138711a" x="138" y="19" width="138" height="15" style="Column header">
+			<text><![CDATA[EMAIL]]></text>
+			<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="60930de5-1886-4eec-88b1-edad375068b1"/>
+		</element>
+		<element kind="staticText" uuid="acb4c8f3-047c-4451-9e16-f12c6978f7de" x="276" y="19" width="138" height="15" style="Column header">
+			<text><![CDATA[Nombre completo]]></text>
+			<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="180924da-9daf-4bef-a928-11ef5a65ba03"/>
+		</element>
+		<element kind="staticText" uuid="dc8b7a3a-c1a9-4ade-85b5-673d60df3d6a" x="414" y="19" width="138" height="15" style="Column header">
+			<text><![CDATA[ROLE]]></text>
+			<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="6b812223-7672-4bfa-90fa-fa9886a09025"/>
+		</element>
+	</columnHeader>
+	<detail>
+		<band height="16" splitType="Stretch">
+			<element kind="line" uuid="f367c019-9cb7-431c-8713-5a96f9b889aa" positionType="FixRelativeToBottom" x="0" y="15" width="555" height="1">
+				<pen lineWidth="0.5" lineColor="#999999"/>
+			</element>
+			<element kind="textField" uuid="60342d5d-586d-4537-8b09-d6031fad6a35" x="0" y="0" width="138" height="15" style="Detail">
+				<expression><![CDATA[$F{id}]]></expression>
+				<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="617a8194-4927-4d8c-961b-a6279491c755"/>
+			</element>
+			<element kind="textField" uuid="184567a0-e051-4cf7-a78d-fe7bc21d84f1" x="138" y="0" width="138" height="15" style="Detail">
+				<expression><![CDATA[$F{email}]]></expression>
+				<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="60930de5-1886-4eec-88b1-edad375068b1"/>
+			</element>
+			<element kind="textField" uuid="7c656b4b-2665-4181-98f1-310f67b2622e" x="276" y="0" width="138" height="15" style="Detail">
+				<expression><![CDATA[$F{fullname}]]></expression>
+				<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="180924da-9daf-4bef-a928-11ef5a65ba03"/>
+			</element>
+			<element kind="textField" uuid="edf0c2f6-492b-4882-81ff-0d5feb03b4f1" x="414" y="0" width="138" height="15" style="Detail">
+				<expression><![CDATA[$F{role}]]></expression>
+				<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="6b812223-7672-4bfa-90fa-fa9886a09025"/>
+			</element>
+		</band>
+	</detail>
+	<columnFooter height="45" splitType="Stretch">
+		<element kind="line" uuid="02519f40-8679-4e40-a1f1-699bc025a206" positionType="FixRelativeToBottom" x="0" y="3" width="555" height="1">
+			<pen lineWidth="0.5" lineColor="#999999"/>
+		</element>
+	</columnFooter>
+	<pageFooter height="20" splitType="Stretch">
+		<element kind="textField" uuid="6f13e17d-4b46-4ede-ab63-9d2685ec9c16" x="433" y="0" width="80" height="20" fontSize="10.0" bold="false" hTextAlign="Right" style="Column header">
+			<expression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></expression>
+		</element>
+		<element kind="textField" uuid="6857db7e-824a-4cda-b8dc-fe5c95aca145" x="513" y="0" width="40" height="20" fontSize="10.0" evaluationTime="Report" bold="false" style="Column header">
+			<expression><![CDATA[" " + $V{PAGE_NUMBER}]]></expression>
+		</element>
+		<element kind="textField" uuid="ef9fc35f-c45f-4ec6-a5cc-ec2020109ea7" x="0" y="0" width="197" height="20" fontSize="10.0" pattern="EEEEE dd MMMMM yyyy" bold="false" style="Column header">
+			<expression><![CDATA[new java.util.Date()]]></expression>
+		</element>
+	</pageFooter>
+	<summary splitType="Stretch"/>
+</jasperReport>

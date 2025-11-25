@@ -1,0 +1,94 @@
+/* Colores personalizados */
+.bg-teal {
+  background-color: rgb(0, 0, 0);
+}
+
+.bg-lightgreen {
+  background-color: #a6d66e;
+}
+
+/* Espacio del logo */
+.logo-placeholder {
+  width: 60px;
+  height: 60px;
+  background-color: #ffffff;
+  border: 2px solid #000;
+}
+
+.titulos_secciones{
+    text-align: center;
+    margin: 20px 0px 20px 0px;
+    font-size: 36px;
+    font-style: italic;
+    color: #333;
+}
+.p_inicioMenu{
+    text-align: center;
+}
+
+/*mensaje: no ha iniciado sesión*/
+.form-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.form-box {
+	width: 100%;
+	max-width: 20%;
+	padding-top: 20px;
+}
+
+
+/* Cuadros de productos */
+.product-box {
+  width: 100%;
+  padding-top: 75%; /* 4:3 ratio */
+  background-color: #ffffff;
+  border: 2px solid #000;
+  position: relative;
+}
+
+.product-box::before,
+.product-box::after {
+  content: '';
+  position: absolute;
+  background-color: #000;
+}
+
+.product-box::before {
+  width: 100%;
+  height: 2px;
+  top: 50%;
+  left: 0;
+  transform: rotate(45deg);
+}
+
+.product-box::after {
+  width: 100%;
+  height: 2px;
+  top: 50%;
+  left: 0;
+  transform: rotate(-45deg);
+}
+
+
+.quantity-control {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+}
+
+.quantity-input {
+  width: 50px;
+  text-align: center;
+}
+
+.cart-item-img {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+}

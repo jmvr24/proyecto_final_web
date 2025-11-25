@@ -1,0 +1,175 @@
+body {
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+}
+
+.bg-teal {
+    background-color: rgb(0, 0, 0);
+}
+
+.logo-placeholder {
+    width: 60px;
+    height: 60px;
+    background-color: #ddd;
+    border: 2px solid #ccc;
+}
+
+.carousel-img-placeholder {
+    width: 100%;
+    height: 300px;
+    background-color: #444;
+    border: 2px solid #222;
+}
+
+.featured-img-placeholder {
+    width: 300px;
+    height: 200px;
+    background-color: #eee;
+    border: 2px solid #aaa;
+}
+
+.titulos_secciones{
+    text-align: center;
+    margin: 20px 0px 20px 0px;
+    font-size: 36px;
+    font-style: italic;
+    color: #333;
+}
+
+.logo-placeholder,
+.logo-img {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+}
+
+/* carrusel */
+.carousel{
+    margin: 20px 50px 20px 50px;
+}
+.carousel-inner{
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+/* estilos sección especialidades */
+.titulos_secciones{
+    text-align: center;
+    margin: 20px 0px 20px 0px;
+    font-size: 36px;
+    font-style: italic;
+    color: #333;
+}
+.contenedor_especialidades {
+    padding: 20px;
+}
+
+.contenedor_especialidades .card {
+    border-radius: 15px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.contenedor_especialidades .card:hover {
+    transform: translateY(-5px);
+}
+
+.contenedor_especialidades .card-img-top {
+    height: 200px;
+    object-fit: cover;
+}
+
+.contenedor_especialidades .card-body {
+    background-color: white;
+    padding: 1.5rem;
+}
+
+.contenedor_especialidades .card-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 0.75rem;
+}
+
+.contenedor_especialidades .card-text {
+    color: #666;
+    margin-bottom: 1rem;
+}
+
+.contenedor_especialidades h6 {
+    font-size: 1.1rem;
+    color: #dc3545;
+    font-weight: bold;
+    margin: 0;
+}
+
+@media screen and (max-width: 992px) {
+    .titulos_secciones{
+        font-size: 32px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .titulos_secciones{
+        font-size: 28px;
+    }
+}
+
+@media screen and (max-width: 575px) {
+    .titulos_secciones{
+        font-size: 22px;
+    }
+    .contenedor_especialidades {
+        padding: 10px;
+    }
+}
+
+
+/* seccion donde estamos ubicados */
+.ubicacion_restaurante{
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.titulo_ubicacion{
+    text-align: center;
+    margin: 20px 0px;
+    font-size: 28px;
+    font-style: italic;
+    color: #333;
+}
+
+.horarios-container {
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.horarios-lista {
+    font-size: 18px;
+    padding: 20px;
+}
+
+.horarios-lista li {
+    padding: 10px 0;
+}
+
+.horarios-lista i {
+    margin-right: 10px;
+    color: #dc3545;
+}
+
+@media screen and (max-width: 991px) {
+    .horarios-container {
+        margin-top: 30px;
+    }
+}
+
+/* Footer */
+footer {
+    margin-top: 50px;
+}

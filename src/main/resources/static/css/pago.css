@@ -1,0 +1,38 @@
+.is-invalid {
+	border-color: #dc3545 !important;
+}
+
+.error-mensaje {
+	color: #dc3545;
+	font-size: 0.875rem;
+	margin-top: 0.25rem;
+}
+
+.product-image {
+	width: 50px;
+	height: 50px;
+	object-fit: cover;
+	border-radius: 5px;
+	margin-right: 10px;
+}
+.product-image {
+	width: 60px;
+	height: 60px;
+	object-fit: contain;
+	margin-right: 15px;
+}
+
+.summary-card {
+	border: 1px solid #dee2e6;
+	border-radius: 5px;
+	padding: 20px;
+	margin-bottom: 20px;
+}
+
+footer {
+	background-color: rgb(0, 0, 0);
+	color: rgb(255, 255, 255);
+	text-align: center;
+	padding: 10px 0;
+	margin-top: auto;
+}
